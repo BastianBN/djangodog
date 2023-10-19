@@ -13,7 +13,7 @@ class BreedSerializer(serializers.ModelSerializer):
                 ]
 
 class DogSerializer(serializers.ModelSerializer):
-    breed = serializers.Foreign(source='breed.name')
+    breed = serializers.CharField(source='breed.name')
     class Meta:
         model = Dog
         fields = ['name',

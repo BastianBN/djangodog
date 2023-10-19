@@ -22,9 +22,6 @@ class Breed(models.Model):
     trainability = models.IntegerField(choices=Rating.choices)
     sheddingamount = models.IntegerField(choices=Rating.choices)
     exerciseneeds = models.IntegerField(choices=Rating.choices)
-    
-    def get_breed_display(self):
-        return dict(self.BREED_CHOICES).get(self.breed, '')
 
 class Dog(models.Model):
     name = models.CharField(max_length=200)
