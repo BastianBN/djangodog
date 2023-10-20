@@ -13,7 +13,8 @@ class BreedSerializer(serializers.ModelSerializer):
                 ]
 
 class DogSerializer(serializers.ModelSerializer):
-    breed = serializers.CharField(source='breed.name')
+    # breed = serializers.CharField(source='breed.name', read_only=True)
+    breed = BreedSerializer()
     class Meta:
         model = Dog
         fields = ['name',
@@ -24,3 +25,8 @@ class DogSerializer(serializers.ModelSerializer):
                   'favoritefood',
                   'favoritetoy',
                 ]
+    def create(self, validated_data):
+        breed_data = validated_data.pop('breed')
+        breed_instance, created = Breed.objects.get_or_create(**breed_data)
+        dog_instance = Dog.objects.create(breed=breed_instance, **validated_data)
+        return dog_instance

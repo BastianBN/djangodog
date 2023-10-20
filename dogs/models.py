@@ -23,6 +23,9 @@ class Breed(models.Model):
     sheddingamount = models.IntegerField(choices=Rating.choices)
     exerciseneeds = models.IntegerField(choices=Rating.choices)
 
+    def __str__(self) -> str:
+        return self.name
+
 class Dog(models.Model):
     name = models.CharField(max_length=200)
     age = models.IntegerField()
