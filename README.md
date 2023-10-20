@@ -11,7 +11,8 @@ Available API endpoints and their corresponding methods for managing them are as
 This project served as a valuable way to learn **Django** and **Django Rest Framework** through practical implementation and to understand best practices for creating a backend.
 
 ### Requirements :
-This projects requires `django` and the `djangorestframework` both installable through `pip` using `pip install`.
+This projects requires `django` and the `djangorestframework`.
+One can install the environment used to run this project by using `pip install -r requirements.txt`
 
 ### TODO :
 - Add a frontend in Vue.js to process data and learn how to establish the connection between the backend and frontend in a full-stack project.
