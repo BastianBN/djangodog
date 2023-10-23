@@ -1,9 +1,7 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <router-view class="grid place-items-center h-screen"></router-view>
+  <router-view class="grid h-screen place-items-center"></router-view>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
