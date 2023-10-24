@@ -1,10 +1,10 @@
 <template>
-  <select v-model="selected">
-    <option v-for="dog in dogs" :value="dog">{{ dog.name }}</option>
-  </select>
-  <div v-if="selected">
+  <section>
+    <select v-model="selected">
+      <option v-for="dog in dogs" :value="dog">{{ dog.name }}</option>
+    </select>
     <Dog :dog="selected"></Dog>
-  </div>
+  </section>
 </template>
 
 <script setup>
