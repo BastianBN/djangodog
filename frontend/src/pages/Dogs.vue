@@ -1,8 +1,10 @@
 <template>
-  <section>
-    <select v-model="selected">
-      <option v-for="dog in dogs" :value="dog">{{ dog.name }}</option>
-    </select>
+  <section class="grid h-screen place-items-center">
+    <div>
+      <select v-model="selected">
+        <option v-for="dog in dogs" :value="dog">{{ dog.name }}</option>
+      </select>
+    </div>
     <Dog :dog="selected"></Dog>
   </section>
 </template>
